@@ -1,165 +1,172 @@
- 
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>اتحاد رياضي لبلدية المجبارة IRM | الموقع الرسمي</title>
+  <title>اتحاد رياضي لبلدية المجبارة IRM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description"
-        content="الموقع الرسمي لنادي اتحاد رياضي لبلدية المجبارة IRM، أخبار الفريق، اللاعبين، والنتائج." />
-
-  <meta name="google-site-verification"
-        content="p__DaBou_IVDFLLuGmmkDmyPSIAkjrgbP_Pmk0SuRIY" />
+  <meta name="description" content="الموقع الرسمي لنادي اتحاد رياضي لبلدية المجبارة IRM">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, Tahoma;
-      background: #f4f4f4;
+      background: #f2f2f2;
+      text-align: center;
     }
 
     header {
-      background: #0a3d62;
+      background: #005eff;
       color: white;
-      display: flex;
-      align-items: center;
-      padding: 15px 30px;
+      padding: 20px;
     }
 
     header img {
-      width: 80px;
-      margin-left: 15px;
+      width: 120px;
+      display: block;
+      margin: auto;
     }
 
     section {
       padding: 40px 20px;
-      text-align: center;
     }
 
     h2 {
-      color: #0a3d62;
+      color: #005eff;
       margin-bottom: 20px;
     }
 
-    .two-box, .three-box, .players, .social {
+    /* القائد ونائب القائد */
+    .leaders {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .leader img {
+      width: 220px;
+      border-radius: 10px;
+    }
+
+    /* الأخبار */
+    .news {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .news img {
+      width: 280px;
+      border-radius: 10px;
+    }
+
+    /* اللاعبين */
+    .players {
       display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
       gap: 20px;
     }
 
-    .two-box {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-    .three-box {
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-
-    .players {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
-
-    .box img {
+    .player img {
       width: 100%;
       border-radius: 10px;
     }
 
-    .box {
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
+    /* تواصل */
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .socials img {
+      width: 60px;
     }
 
     footer {
-      background: #0a3d62;
+      background: #005eff;
       color: white;
-      text-align: center;
       padding: 15px;
-    }
-
-    .social img {
-      width: 60px;
+      margin-top: 40px;
     }
   </style>
 </head>
 
 <body>
 
-<!-- الهيدر -->
 <header>
-  <img src="logo.jpg" alt="شعار النادي">
-  <h1>اتحاد رياضي لبلدية المجبارة (IRM)</h1>
+  <img src="logo.jpg">
+  <h1>اتحاد رياضي لبلدية المجبارة IRM</h1>
 </header>
 
-<!-- مقدمة -->
 <section>
   <h2>النادي</h2>
-  <p>
-    نادي اتحاد رياضي لبلدية المجبارة هو فريق رياضي يمثل بلدية المجبارة،
-    يهدف إلى تطوير كرة القدم وتشجيع المواهب الشابة.
-  </p>
+  <p>نادي اتحاد رياضي لبلدية المجبارة، فريق طموح يمثل المنطقة بكل فخر.</p>
 </section>
 
-<!-- القائد ونائب القائد -->
 <section>
-  <h2>قيادة الفريق</h2>
-  <div class="two-box">
-    <div class="box">
-      <img src="">
-      <h3> بوعبدلي محمد</h3>
-      <p>قائد الفريق</p>
+  <h2>قائد الفريق ونائب القائد</h2>
+  <div class="leaders">
+    <div class="leader">
+      <img src="images/captain.jpg">
+      <p>قائد الفريق:   بوعبدلي محمد</p>
     </div>
-    <div class="box">
-      <img src="">
-      <h3>نائب القائد</h3>
-      <p> سماعيل محمد</p>
+
+    <div class="leader">
+      <img src="images/vice.jpg">
+      <p>نائب القائد:  سماعيل محمد</p>
     </div>
   </div>
 </section>
 
-<!-- الأخبار -->
 <section>
   <h2>أخبار الفريق</h2>
-  <div class="three-box">
-    <div class="box"><img src=""><p>  </p></div>
-    <div class="box"><img src=""><p>  </p></div>
-    <div class="box"><img src=""><p>  </p></div>
+  <div class="news">
+    <div>
+      <img src="images/news1.jpg">
+      <p>فوز مهم في المباراة الأخيرة</p>
+    </div>
+    <div>
+      <img src="images/news2.jpg">
+      <p>استعدادات الفريق للمقابلة القادمة</p>
+    </div>
+    <div>
+      <img src="images/news3.jpg">
+      <p>تدريبات قوية هذا الأسبوع</p>
+    </div>
   </div>
 </section>
 
-<!-- اللاعبين -->
 <section>
   <h2>اللاعبون</h2>
   <div class="players">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
+    <div class="player"><img src="images/player1.jpg"><p>لاعب 1</p></div>
+    <div class="player"><img src="images/player2.jpg"><p>لاعب 2</p></div>
+    <div class="player"><img src="images/player3.jpg"><p>لاعب 3</p></div>
+    <div class="player"><img src="images/player4.jpg"><p>لاعب 4</p></div>
+    <div class="player"><img src="images/player5.jpg"><p>لاعب 5</p></div>
+    <div class="player"><img src="images/player6.jpg"><p>لاعب 6</p></div>
+    <div class="player"><img src="images/player7.jpg"><p>لاعب 7</p></div>
+    <div class="player"><img src="images/player8.jpg"><p>لاعب 8</p></div>
+    <div class="player"><img src="images/player9.jpg"><p>لاعب 9</p></div>
+    <div class="player"><img src="images/player10.jpg"><p>لاعب 10</p></div>
+    <div class="player"><img src="images/player11.jpg"><p>لاعب 11</p></div>
   </div>
 </section>
 
 <section>
   <h2>اتصل بنا</h2>
-  <div class="social three-box">
-    <a href="#"><img src=insta.jpg"></a>
-    <a href="#"><img src="tik.png></a>
-    <a href="#"><img src="face.jpg></a>
+  <div class="socials">
+    <a href="#"><img src=""></a>
+    <a href="#"><img src=""></a>
+    <a href="#"><img src=""></a>
   </div>
 </section>
 
 <footer>
-  © جميع الحقوق محفوظة لنادي اتحاد رياضي لبلدية المجبارة 2026
+  © 2026 اتحاد رياضي لبلدية المجبارة – جميع الحقوق محفوظة
 </footer>
 
 </body>
 </html>
-
-
-
