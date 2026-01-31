@@ -1,169 +1,93 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <title>اتحاد رياضي لبلدية المجبارة IRM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="الموقع الرسمي لنادي اتحاد رياضي لبلدية المجبارة IRM">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Tahoma;
-      background: #f2f2f2;
-      text-align: center;
-    }
+  <meta name="description" content="الموقع الرسمي لنادي اتحاد رياضي لبلدية المجبارة IRM، أخبار الفريق، اللاعبين، النتائج.">
 
-    header {
-      background: #005eff;
-      color: white;
-      padding: 20px;
-    }
-
-    header img {
-      width: 120px;
-      display: block;
-      margin: auto;
-    }
-
-    section {
-      padding: 40px 20px;
-    }
-
-    h2 {
-      color: #005eff;
-      margin-bottom: 20px;
-    }
-
-    /* القائد ونائب القائد */
-    .leaders {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    .leader img {
-      width: 220px;
-      border-radius: 10px;
-    }
-
-    /* الأخبار */
-    .news {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .news img {
-      width: 280px;
-      border-radius: 10px;
-    }
-
-    /* اللاعبين */
-    .players {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 20px;
-    }
-
-    .player img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    /* تواصل */
-    .socials {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .socials img {
-      width: 60px;
-    }
-
-    footer {
-      background: #005eff;
-      color: white;
-      padding: 15px;
-      margin-top: 40px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- ====== HEADER ====== -->
 <header>
-  <img src="logo.jpg">
+  <img src="logo.jpg" alt="لوغو النادي">
   <h1>اتحاد رياضي لبلدية المجبارة IRM</h1>
 </header>
 
+<!-- ====== آخر الأخبار ====== -->
 <section>
-  <h2>النادي</h2>
-  <p>نادي اتحاد رياضي لبلدية المجبارة، فريق طموح يمثل المنطقة بكل فخر.</p>
+  <h2>آخر الأخبار</h2>
+
+  <div class="news">
+    <div class="news-box">
+      <img src="news1.jpg">
+      <p>فوز مستحق للفريق في آخر مباراة</p>
+    </div>
+
+    <div class="news-box">
+      <img src="news2.jpg">
+      <p>تحضيرات قوية للمقابلة القادمة</p>
+    </div>
+
+    <div class="news-box">
+      <img src="news3.jpg">
+      <p>أجواء ممتازة في التدريبات</p>
+    </div>
+  </div>
 </section>
 
+<!-- ====== القائد ونائب القائد ====== -->
 <section>
-  <h2>قائد الفريق ونائب القائد</h2>
+  <h2>قيادة الفريق</h2>
+
   <div class="leaders">
     <div class="leader">
-      <img src="images/captain.jpg">
-      <p>قائد الفريق:   بوعبدلي محمد</p>
+      <img src="captain.jpg">
+      <p>قائد الفريق: أحمد بن علي</p>
     </div>
 
     <div class="leader">
-      <img src="images/vice.jpg">
-      <p>نائب القائد:  سماعيل محمد</p>
+      <img src="vice.jpg">
+      <p>نائب القائد: يوسف قاسمي</p>
     </div>
   </div>
 </section>
 
-<section>
-  <h2>أخبار الفريق</h2>
-  <div class="news">
-    <div>
-      <img src="images/news1.jpg">
-      <p>فوز مهم في المباراة الأخيرة</p>
-    </div>
-    <div>
-      <img src="images/news2.jpg">
-      <p>استعدادات الفريق للمقابلة القادمة</p>
-    </div>
-    <div>
-      <img src="images/news3.jpg">
-      <p>تدريبات قوية هذا الأسبوع</p>
-    </div>
-  </div>
-</section>
-
+<!-- ====== اللاعبين ====== -->
 <section>
   <h2>اللاعبون</h2>
+
   <div class="players">
-    <div class="player"><img src="images/player1.jpg"><p>لاعب 1</p></div>
-    <div class="player"><img src="images/player2.jpg"><p>لاعب 2</p></div>
-    <div class="player"><img src="images/player3.jpg"><p>لاعب 3</p></div>
-    <div class="player"><img src="images/player4.jpg"><p>لاعب 4</p></div>
-    <div class="player"><img src="images/player5.jpg"><p>لاعب 5</p></div>
-    <div class="player"><img src="images/player6.jpg"><p>لاعب 6</p></div>
-    <div class="player"><img src="images/player7.jpg"><p>لاعب 7</p></div>
-    <div class="player"><img src="images/player8.jpg"><p>لاعب 8</p></div>
-    <div class="player"><img src="images/player9.jpg"><p>لاعب 9</p></div>
-    <div class="player"><img src="images/player10.jpg"><p>لاعب 10</p></div>
-    <div class="player"><img src="images/player11.jpg"><p>لاعب 11</p></div>
+    <div class="player"><img src="player1.jpg"><p>لاعب 1</p></div>
+    <div class="player"><img src="player2.jpg"><p>لاعب 2</p></div>
+    <div class="player"><img src="player3.jpg"><p>لاعب 3</p></div>
+    <div class="player"><img src="player4.jpg"><p>لاعب 4</p></div>
+    <div class="player"><img src="player5.jpg"><p>لاعب 5</p></div>
+    <div class="player"><img src="player6.jpg"><p>لاعب 6</p></div>
+    <div class="player"><img src="player7.jpg"><p>لاعب 7</p></div>
+    <div class="player"><img src="player8.jpg"><p>لاعب 8</p></div>
+    <div class="player"><img src="player9.jpg"><p>لاعب 9</p></div>
+    <div class="player"><img src="player10.jpg"><p>لاعب 10</p></div>
+    <div class="player"><img src="player11.jpg"><p>لاعب 11</p></div>
   </div>
 </section>
 
+<!-- ====== اتصل بنا ====== -->
 <section>
   <h2>اتصل بنا</h2>
+
   <div class="socials">
-    <a href="#"><img src=""></a>
-    <a href="#"><img src=""></a>
-    <a href="#"><img src=""></a>
+    <a href="#"><img src="face.jpg"></a>
+    <a href="#"><img src="insta.jpg"></a>
+    <a href="#"><img src="tik.png"></a>
   </div>
 </section>
 
+<!-- ====== FOOTER ====== -->
 <footer>
   © 2026 اتحاد رياضي لبلدية المجبارة – جميع الحقوق محفوظة
 </footer>
