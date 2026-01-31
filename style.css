@@ -1,1 +1,86 @@
+body {
+  margin: 0;
+  font-family: Arial, Tahoma;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: #0066ff;
+  color: white;
+  padding: 20px;
+}
+
+header img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 40px 20px;
+}
+
+h2 {
+  color: #0066ff;
+  margin-bottom: 25px;
+}
+
+/* ===== NEWS ===== */
+.news {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.news-box img {
+  width: 280px;
+  border-radius: 10px;
+}
+
+/* ===== LEADERS ===== */
+.leaders {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.leader img {
+  width: 220px;
+  border-radius: 10px;
+}
+
+/* ===== PLAYERS ===== */
+.players {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.player img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ===== SOCIAL ===== */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.socials img {
+  width: 60px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #0066ff;
+  color: white;
+  padding: 15px;
+}
+
 
