@@ -1,86 +1,83 @@
 body {
   margin: 0;
-  font-family: Arial, Tahoma;
-  background: #f4f4f4;
+  font-family: Tahoma, Arial;
+  background: #e6f4ff;
+  color: #003366;
+}
+
+/* الهيدر */
+header {
+  background: #1e90ff;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.logo {
+  width: 70px;
+  margin-left: 15px;
+}
+
+/* أقسام */
+section {
+  padding: 30px 15px;
   text-align: center;
 }
 
-/* ===== HEADER ===== */
-header {
-  background: #0066ff;
-  color: white;
-  padding: 20px;
-}
-
-header img {
-  width: 120px;
-  margin-bottom: 10px;
-}
-
-/* ===== SECTIONS ===== */
-section {
-  padding: 40px 20px;
-}
-
 h2 {
-  color: #0066ff;
-  margin-bottom: 25px;
+  color: #1e90ff;
 }
 
-/* ===== NEWS ===== */
-.news {
+/* صورة جماعية */
+.team-photo img {
+  width: 95%;
+  max-width: 900px;
+  border-radius: 15px;
+}
+
+/* كروت */
+.cards {
   display: flex;
-  justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
-.news-box img {
+.card {
+  background: white;
+  border-radius: 15px;
   width: 280px;
-  border-radius: 10px;
+  padding: 10px;
 }
 
-/* ===== LEADERS ===== */
-.leaders {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.leader img {
-  width: 220px;
-  border-radius: 10px;
-}
-
-/* ===== PLAYERS ===== */
-.players {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 20px;
-}
-
-.player img {
+.card img {
   width: 100%;
   border-radius: 10px;
 }
 
-/* ===== SOCIAL ===== */
-.socials {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+/* اللاعبون */
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
 }
 
-.socials img {
+.players-grid img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* اتصل بنا */
+.social img {
   width: 60px;
+  margin: 10px;
 }
 
-/* ===== FOOTER ===== */
+/* الفوتر */
 footer {
-  background: #0066ff;
+  background: #1e90ff;
   color: white;
   padding: 15px;
+  text-align: center;
 }
-
-
