@@ -1,107 +1,208 @@
-/* الألوان المفخمة: تدرجات الأزرق الفاتح والعميق */
 :root {
-  --light-blue: #00b4d8;  /* أزرق فاتح نقي */
-  --deep-blue: #03045e;   /* أزرق ملكي غامق */
-  --soft-blue: #caf0f8;   /* أزرق خفيف جداً للخلفيات */
-  --white: #ffffff;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    --primary-gold: #d4af37;
+    --dark-bg: #0a0a0a;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --text-color: #ffffff;
 }
 
 body {
-  font-family: 'Changa', sans-serif;
-  background-color: var(--soft-blue);
-  color: var(--deep-blue);
-  direction: rtl;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    overflow-x: hidden;
 }
 
+/* Header الفخم */
 header {
-  background: linear-gradient(rgba(3, 4, 94, 0.8), rgba(3, 4, 94, 0.8)), url('stadium.jpg') no-repeat center/cover;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--white);
-  border-bottom: 5px solid var(--light-blue);
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 2px solid var(--primary-gold);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .main-logo {
-  width: 110px;
-  margin-bottom: 15px;
-  filter: drop-shadow(0 0 10px var(--light-blue));
+    height: 60px;
+    filter: drop-shadow(0 0 5px var(--primary-gold));
 }
 
-.container { max-width: 1200px; margin: auto; padding: 20px; }
+.club-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--primary-gold);
+}
+
+nav .nav-btn {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+nav .nav-btn:hover, nav .nav-btn.active {
+    color: var(--primary-gold);
+    border-bottom: 2px solid var(--primary-gold);
+}
+
+/* الأقسام */
+.content-section {
+    display: none;
+    padding: 50px 20px;
+    animation: fadeIn 0.8s ease;
+}
+
+.content-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 .section-title {
-  text-align: center;
-  margin: 60px 0 40px;
-  font-size: 2.2rem;
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-gold);
+    margin-bottom: 40px;
+    text-transform: uppercase;
 }
 
-.section-title::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: var(--light-blue);
-  margin: 10px auto;
+/* الرئيسية */
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.news-card {
-  position: relative;
-  height: 350px;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    width: 100%;
+    padding: 40px;
+    text-align: center;
 }
 
-.news-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-.news-overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 20px;
-  background: linear-gradient(transparent, var(--deep-blue));
-  color: white;
+/* الجدول */
+.table-container {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
-.leaders-flex { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-.leader-card { background: white; padding: 30px; border-radius: 20px; text-align: center; width: 300px; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-.img-holder { width: 160px; height: 160px; margin: 0 auto 15px; border-radius: 50%; border: 3px solid var(--light-blue); padding: 3px; }
-.img-holder img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
-.badge { background: var(--light-blue); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; }
+th, td {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+th { color: var(--primary-gold); font-size: 1.2rem; }
+
+/* اللاعبين */
+.player-filter {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--primary-gold);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
 
 .players-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
 }
 
-.player-card { background: white; border-radius: 15px; overflow: hidden; text-align: center; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-.player-card img { width: 100%; height: 200px; object-fit: cover; }
-.p-info { padding: 15px; }
-.p-info h4 { color: var(--deep-blue); font-size: 1.1rem; }
-.p-info p { color: var(--light-blue); font-size: 0.85rem; font-weight: bold; }
-
-.footer-section { background: var(--deep-blue); color: white; padding: 50px 0 20px; text-align: center; margin-top: 60px; }
-.social-links { display: flex; justify-content: center; gap: 20px; margin: 25px 0; }
-.social-links img { width: 30px; height: 30px; transition: 0.3s; }
-.copy { font-size: 0.8rem; opacity: 0.5; }
-
-@media (max-width: 768px) {
-  .players-grid { grid-template-columns: repeat(2, 1fr); }
-  .news-card { height: 280px; }
+.player-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid transparent;
 }
+
+.player-card:hover {
+    transform: scale(1.05);
+    border-color: var(--primary-gold);
+}
+
+.player-card img { width: 100%; height: 250px; object-fit: cover; }
+.player-info { padding: 15px; }
+.player-info h4 { margin: 5px 0; color: var(--primary-gold); }
+
+/* المعرض والأخبار */
+.gallery-grid, .news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item img, .news-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery-item img:hover { filter: brightness(1.2); }
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top:0; left:0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.lightbox img { max-width: 90%; max-height: 80%; border: 3px solid var(--primary-gold); }
